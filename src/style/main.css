@@ -599,9 +599,8 @@ body {
   grid-column: span 3 / span 3;
 }
 
-.my-\[50px\] {
-  margin-top: 50px;
-  margin-bottom: 50px;
+.col-span-6 {
+  grid-column: span 6 / span 6;
 }
 
 .mt-\[100px\] {
@@ -637,19 +636,24 @@ body {
   height: 2rem;
 }
 
+.size-9 {
+  width: 2.25rem;
+  height: 2.25rem;
+}
+
 .size-\[18px\] {
   width: 18px;
   height: 18px;
 }
 
+.size-\[20px\] {
+  width: 20px;
+  height: 20px;
+}
+
 .size-\[70px\] {
   width: 70px;
   height: 70px;
-}
-
-.size-9 {
-  width: 2.25rem;
-  height: 2.25rem;
 }
 
 .h-\[80px\] {
@@ -660,8 +664,16 @@ body {
   max-height: 750px;
 }
 
+.min-h-\[200px\] {
+  min-height: 200px;
+}
+
 .min-h-\[350px\] {
   min-height: 350px;
+}
+
+.w-\[326px\] {
+  width: 326px;
 }
 
 .w-fit {
@@ -675,6 +687,14 @@ body {
 
 .min-w-\[400px\] {
   min-width: 400px;
+}
+
+.max-w-\[162px\] {
+  max-width: 162px;
+}
+
+.max-w-\[168px\] {
+  max-width: 168px;
 }
 
 .grow {
@@ -691,6 +711,10 @@ body {
 
 .grid-cols-2 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.grid-cols-6 {
+  grid-template-columns: repeat(6, minmax(0, 1fr));
 }
 
 .flex-row {
@@ -741,6 +765,18 @@ body {
   gap: 30px;
 }
 
+.space-y-\[20px\] > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(20px * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(20px * var(--tw-space-y-reverse));
+}
+
+.space-y-\[30px\] > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(30px * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(30px * var(--tw-space-y-reverse));
+}
+
 .overflow-hidden {
   overflow: hidden;
 }
@@ -771,6 +807,11 @@ body {
   background-color: rgb(20 20 20 / var(--tw-bg-opacity));
 }
 
+.bg-\[\#202020\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(32 32 32 / var(--tw-bg-opacity));
+}
+
 .bg-\[\#323437\] {
   --tw-bg-opacity: 1;
   background-color: rgb(50 52 55 / var(--tw-bg-opacity));
@@ -795,15 +836,6 @@ body {
   background-color: rgb(239 246 255 / 0.5);
 }
 
-.bg-\[\#\] {
-  background-color: #;
-}
-
-.bg-\[\#202020\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(32 32 32 / var(--tw-bg-opacity));
-}
-
 .bg-\[url\(\'\/assets\/images\/item-house-1\.jpg\'\)\] {
   background-image: url('/assets/images/item-house-1.jpg');
 }
@@ -818,6 +850,10 @@ body {
 
 .bg-\[url\(\'\/assets\/images\/item-house-4\.jpg\'\)\] {
   background-image: url('/assets/images/item-house-4.jpg');
+}
+
+.bg-card-benefits-gradient {
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 30.03%, #050211 100%);
 }
 
 .bg-card-deals-gradient {
@@ -864,6 +900,11 @@ body {
   padding-bottom: 0.75rem;
 }
 
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
 .py-6 {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
@@ -879,14 +920,13 @@ body {
   padding-bottom: 24px;
 }
 
-.py-4 {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-}
-
 .py-\[50px\] {
   padding-top: 50px;
   padding-bottom: 50px;
+}
+
+.pl-\[20px\] {
+  padding-left: 20px;
 }
 
 .pl-\[30px\] {
@@ -901,12 +941,12 @@ body {
   padding-top: 30px;
 }
 
-.pl-\[20px\] {
-  padding-left: 20px;
-}
-
 .text-center {
   text-align: center;
+}
+
+.text-\[18px\] {
+  font-size: 18px;
 }
 
 .text-\[20px\] {
@@ -995,10 +1035,6 @@ body {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-.text-\[\] {
-  color: ;
 }
 
 .placeholder\:text-\[20px\]::-moz-placeholder {
